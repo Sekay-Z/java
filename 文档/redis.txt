@@ -1,0 +1,13 @@
+Window:
+redis-server.exe --service-install redis.windows.conf  注册服务
+redis-server --service-uninstal 删除服务
+redis-server --service-start 开启服务
+redis-server --service-stop 停止服务
+
+redis-cli.exe -h 127.0.0.1 -p 6379 (-a 密码)
+
+配置文件将protect_mode yes改为no
+把bind 127.0.0.1注释掉 外网也可以访问
+
+npm install --save better-scroll 
+npm install --save-D less-loader

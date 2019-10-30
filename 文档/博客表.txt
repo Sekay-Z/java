@@ -1,0 +1,43 @@
+用户表：
+CREATE TABLE user (
+user_id mediumint(8) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+username varchar(32) NOT NULL COMMENT '用户名',
+password varchar(32) NOT NULL COMMENT '用户密码',
+PRIMARY KEY (user_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+评论表：
+CREATE TABLE comment(
+comment_id mediumint(8) NOT NULL AUTO_INCREMENT COMMENT '评论id',
+comment_type mediumint(8) NOT NULL COMMENT '评论类型',
+comment_content varchar(255) NOT NULL COMMENT '评论内容',
+comment_from_uid mediumint(8) NOT NULL COMMENT '评论用户id',
+comment_time TIMESTAMP NOT NULL default CURRENT_TIMESTAMP COMMENT '评论时间',
+foreign key(comment_from_uid) references user(user_id),
+PRIMARY KEY (comment_id)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+回复评论表：
+CREATE TABLE replyComment(
+replyComment_id mediumint(8) NOT NULL AUTO_INCREMENT COMMENT '评论id',
+replyComment_parentid mediumint(8) NOT NULL COMMENT '父评论id',
+replyComment_content varchar(255) NOT NULL COMMENT '评论内容',
+replyComment_from_uid mediumint(8) NOT NULL COMMENT '评论用户id',
+replyComment_from_name varchar(30) NOT NULL COMMENT '评论用户名',
+replyComment_time TIMESTAMP NOT NULL default CURRENT_TIMESTAMP COMMENT '回复时间',
+replyCommentt_to_uid mediumint(8) NOT NULL COMMENT '回复用户id',
+replyComment_to_name varchar(30) NOT NULL COMMENT '回复用户名',
+foreign key(replyComment_id) references comment(comment_id),
+PRIMARY KEY (replyComment_id)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+文章表：
+CREATE TABLE article (
+article_id smallint(5) NOT NULL AUTO_INCREMENT COMMENT '日志自增ID号',
+article_name varchar(128) NOT NULL COMMENT '文章名称',
+article_time TIMESTAMP NOT NULL default CURRENT_TIMESTAMP on update current_timestamp COMMENT '发布时间',
+article_click int(10) NOT NULL COMMENT '查看人数',
+article_content text NOT NULL COMMENT '文章内容',
+article_status int(13) NOT NULL DEFAULT 1 COMMENT '文章的模式:0为私有,1为公开',
+PRIMARY KEY (article_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

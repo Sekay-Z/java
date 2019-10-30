@@ -1,0 +1,16 @@
+3个工程：
+公共接口工程：存bean，service接口,异常
+服务提供者工程：导入公共接口工程maven依赖，自身的bean 和service接口可以删掉，只留下service实现类
+服务消费者工程：导入公共接口工程maven依赖，自身的bean 和service接口可以删掉，只留下service实现类
+
+导包
+配置信息两个工程都一样，除了项目的端口
+dubbo.application.name=user-service-provider（名字变化）
+dubbo.registry.address=127.0.0.1:2181
+dubbo.registry.protocol=zookeeper
+dubbo.protocol.name=dubbo
+dubbo.protocol.port=20880
+server.port=7080（项目端口变化）
+
+服务提供者用dubbo的@Service，注解在实现类上 暴露服务
+服务消费者在用到提供者的地方上，即@Autowire替换为@Reference引用服务

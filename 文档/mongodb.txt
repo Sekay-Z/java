@@ -1,0 +1,10 @@
+开启mongod服务端：
+mongod -config mongodb.conf  以配置文件的方式启动
+
+mongo连接数据库
+
+关闭mongod服务端:
+use admin
+db.shutdownServer();（在mongo里）
+或者
+pkill mongod（在外面）

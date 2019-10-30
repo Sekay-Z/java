@@ -1,0 +1,22 @@
+数据库：增：create database mydata;
+             删：drop database mydata;
+             改:  alter database mydata charser gbk;
+             查：show databases(所有);
+                    shiw databases like ...(部分);
+             选择：use mydata;
+数据表：增：create table my_table(
+                     name varchar(10) primary key,
+                     age int unique key
+                     );(表要在数据库里建立，先选择数据库 或者 通过库.表的形式 又或者 通过表选项的形式)
+              删：drop table my_table;
+              改：alter table my_table ：add  sex varchar(20);
+                                                        modify name varchar(10);
+                                                         drop age;
+              查：show tables;
+                     show tables like...;
+                     desc my_table;
+数据：增：insert into my_table values('shukai',20);
+          删：delete from my_table where age=20;
+          改：update my_table set ...=... , ...=...  where ...=...;
+          查：select * from my_table;
+                 select  name from my_table where age=20;

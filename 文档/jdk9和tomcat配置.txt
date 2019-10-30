@@ -1,0 +1,18 @@
+jdk9配置：
+export JAVA_HOME=/usr/local/java/jdk-9.0.4
+export CLASSPATH=.:${JAVA_HOME}/lib:$CLASSPATH
+export PATH=${JAVA_HOME}/bin:$PATH
+
+tomcat7配置：
+export JAVA_HOME=/usr/local/java/jdk-9.0.4
+export CLASSPATH=.:${JAVA_HOME}/lib:$CLASSPATH
+export PATH=${JAVA_HOME}/bin:$PATH
+export TOMCAT_HOME=/usr/local/tomcat/apache-tomcat-7.0.94
+
+
+/usr/local/tomcat/apache-tomcat-7.0.94/bin/startup.sh  开启tomcat 
+/usr/local/tomcat/apache-tomcat-7.0.94/bin/shutdown.sh  关闭tomcat
+/usr/local/tomcat/apache-tomcat-7.0.94/webapps
+
+war包部署不成功是因为没有加项目名
+<Context path="/" docBase="/usr/local/tomcat/apache-tomcat-7.0.94/webapps/blog_war" reloadable="true" />

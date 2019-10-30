@@ -1,0 +1,4 @@
+Window:
+net stop RabbitMQ
+net start RabbitMQ
+net stop RabbitMQ && net start RabbitMQ ÖØÆô
