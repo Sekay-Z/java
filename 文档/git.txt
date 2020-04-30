@@ -1,0 +1,16 @@
+第一次提交：
+git clone 
+粘代码
+在最开始的页面开bash
+git add .
+git commit -m  ""
+git push
+
+第二次提交：
+git clone 
+粘代码
+在最开始的页面开bash
+git add .
+git commit -m  ""
+git pull
+git push
