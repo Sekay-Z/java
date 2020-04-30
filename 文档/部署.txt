@@ -1,2 +1,7 @@
 前端里所有接口要改成服务器ip
 docker部署：mysql配置文件改为容器内服务器地址(172.17.0.2)
+
+后台运行jar包：
+nohup java -jar jar包 (>./日志文件名.log) &
+kill -s 9 进程id
+tail -n 200 日志名.log
