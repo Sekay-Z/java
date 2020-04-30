@@ -1,7 +1,13 @@
 jdk9≈‰÷√£∫
+tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz
+vim /etc/profile
+
 export JAVA_HOME=/usr/local/java/jdk-9.0.4
 export CLASSPATH=.:${JAVA_HOME}/lib:$CLASSPATH
 export PATH=${JAVA_HOME}/bin:$PATH
+
+source /etc/profile
+
 
 tomcat7≈‰÷√£∫
 export JAVA_HOME=/usr/local/java/jdk-9.0.4
