@@ -1,35 +1,35 @@
-docker search ¾µÏñÃû
-docker pull ¾µÏñÃû
+docker search é•œåƒå
+docker pull é•œåƒå
 docker images
-docker images -q ÁĞ³ö¾µÏñid
-docker rmi -f  ¾µÏñ
-docker rmi -f ¾µÏñ $(docker images -q)
+docker images -q åˆ—å‡ºé•œåƒid
+docker rmi -f  é•œåƒ
+docker rmi -f é•œåƒ $(docker images -q)
 
-docker run -it ¾µÏñÃû»òID   runĞÂ½¨²¢Æô¶¯ÈİÆ÷  -i ½»»¥  -t ´ò¿ªÎ±ÖÕ¶Ë   --name ºóÃæÊäÈëĞÂµÄ¾µÏñÃû  -p Ó³ÉäµÄĞÂ¶Ë¿ÚºÅ£ºÀÏ¶Ë¿ÚºÅ
-dockers run -d ¾µÏñÃû»òID    Æô¶¯ÊØ»¤Ê½ÈİÆ÷
-docker ps ÁĞ³öÕıÔÚÔËĞĞµÄÈİÆ÷ £¨ps -ef|¹Ø¼ü×Ö)
-ÔÚÈİÆ÷ÖÕ¶ËÄÚ£ºexit Í£Ö¹²¢ÍË³öÈİÆ÷  CTRL+P+Q ²»Í£Ö¹ÍË³öÈİÆ÷
-docker start ÈİÆ÷ID    Æô¶¯ÈİÆ÷
-docker restart ÈİÆ÷ID   
-docker  exec  -it  ÈİÆ÷ID /bin/bash 
-docker stop ÈİÆ÷ID Í£Ö¹ÈİÆ÷
-docker kill ÈİÆ÷ID Ç¿ÖÆÍ£Ö¹ÈİÆ÷
-docker rm -f  ÈİÆ÷ID
-docker cp ÈİÆ÷ID£ºÈİÆ÷ÄÚÎÄ¼şÂ·¾¶  ËŞÖ÷»úÂ·¾¶     ¿½±´ÎÄ¼şµ½ËŞÖ÷»ú
-docker inspect ÈİÆ÷ID  ²é¿´ÈİÆ÷ÄÚ²¿Ï¸½Ú
+docker run -it é•œåƒåæˆ–ID   runæ–°å»ºå¹¶å¯åŠ¨å®¹å™¨  -i äº¤äº’  -t æ‰“å¼€ä¼ªç»ˆç«¯   --name åé¢è¾“å…¥æ–°çš„é•œåƒå  -p æ˜ å°„çš„æ–°ç«¯å£å·ï¼šè€ç«¯å£å·
+dockers run -d é•œåƒåæˆ–ID    å¯åŠ¨å®ˆæŠ¤å¼å®¹å™¨
+docker ps åˆ—å‡ºæ­£åœ¨è¿è¡Œçš„å®¹å™¨ ï¼ˆps -ef|å…³é”®å­—)
+åœ¨å®¹å™¨ç»ˆç«¯å†…ï¼šexit åœæ­¢å¹¶é€€å‡ºå®¹å™¨  CTRL+P+Q ä¸åœæ­¢é€€å‡ºå®¹å™¨
+docker start å®¹å™¨ID    å¯åŠ¨å®¹å™¨
+docker restart å®¹å™¨ID   
+docker  exec  -it  å®¹å™¨ID /bin/bash 
+docker stop å®¹å™¨ID åœæ­¢å®¹å™¨
+docker kill å®¹å™¨ID å¼ºåˆ¶åœæ­¢å®¹å™¨
+docker rm -f  å®¹å™¨ID
+docker cp å®¹å™¨IDï¼šå®¹å™¨å†…æ–‡ä»¶è·¯å¾„  å®¿ä¸»æœºè·¯å¾„     æ‹·è´æ–‡ä»¶åˆ°å®¿ä¸»æœº
+docker inspect å®¹å™¨ID  æŸ¥çœ‹å®¹å™¨å†…éƒ¨ç»†èŠ‚
  
-docker commit -a "×÷Õß" -m "±¸×¢ĞÅÏ¢" ÈİÆ÷ID ÃüÃû¿Õ¼ä/ĞÂµÄ¾µÏñÃû£ºtag    Éú³ÉĞÂµÄ¾µÏñ
-docker run -it -v /ËŞÖ÷»ú¾ø¶ÔÂ·¾¶Ä¿Â¼£º/ÈİÆ÷ÄÚÄ¿Â¼ ¾µÏñÃû    Éú³ÉÊı¾İ¾í
-docker run -it  --name  2  --volumes-from  1  ¾µÏñ    ÈİÆ÷¼ä¹²Ïí
+docker commit -a "ä½œè€…" -m "å¤‡æ³¨ä¿¡æ¯" å®¹å™¨ID å‘½åç©ºé—´/æ–°çš„é•œåƒåï¼štag    ç”Ÿæˆæ–°çš„é•œåƒ
+docker run -it -v /å®¿ä¸»æœºç»å¯¹è·¯å¾„ç›®å½•ï¼š/å®¹å™¨å†…ç›®å½• é•œåƒå    ç”Ÿæˆæ•°æ®å·
+docker run -it  --name  2  --volumes-from  1  é•œåƒ    å®¹å™¨é—´å…±äº«
 
-docker  build  -f  dockerfileÂ·¾¶  -t ¹¹½¨µÄ¾µÏñÃû .(Òª¼Ó¸öµã)       -t£ºtagµÄÒâË¼  ¸øËü¾µÏñÃûºÍ±êÇ© ±êÇ©¿É²»¸ø
+docker  build  -f  dockerfileè·¯å¾„  -t æ„å»ºçš„é•œåƒå .(è¦åŠ ä¸ªç‚¹)       -tï¼štagçš„æ„æ€  ç»™å®ƒé•œåƒåå’Œæ ‡ç­¾ æ ‡ç­¾å¯ä¸ç»™
 
-mysql£ºdocker run --name mysql --restart=always -p 3306:3306 -e MYSQL_ROOT_PASSWORD=shukai1415 -d 62a9f311b99c --lower_case_table_names=1 --default-authentication-plugin=mysql_native_password
-nginx£ºdocker run -d --name nginx -v /docker/nginx/html:/usr/share/nginx/html -v /docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -p 8090:80 ed21b7a8aee9 
-mongosb£ºdocker run --name mongodb -p 27017:27017 -d cdc6740b66a7
-jar°ü£ºdocker run -d -p 8080:8080 --link mysql:mysql 728650e9b73f
+mysqlï¼šdocker run --name mysql --restart=always -p 3306:3306 -e MYSQL_ROOT_PASSWORD=shukai1415 -d 62a9f311b99c --lower_case_table_names=1 --default-authentication-plugin=mysql_native_password
+nginxï¼šdocker run -d --name nginx -v /docker/nginx/html:/usr/share/nginx/html -v /docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf -p 8090:80 ed21b7a8aee9 
+mongosbï¼šdocker run --name mongodb -p 27017:27017 -d cdc6740b66a7
+jaråŒ…ï¼šdocker run -d -p 8080:8080 --link mysql:mysql 728650e9b73f
 
 FROM java:8
-ADD ebook-0.0.1-SNAPSHOT.jar ebook.jar
+COPY ebook-0.0.1-SNAPSHOT.jar ebook.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/ebook.jar"]
+ENTRYPOINT ["java","-jar","ebook.jar"]
